@@ -24,14 +24,16 @@ Implemente o algoritmo de gradiente descendente para encontrar o mínimo da fun�
 Repita o exercício 1 para a função $U(x) = x^2 (x-1)(x+1)$. Esta função tem dois mínimos globais. Use $x_ {0} = 2$ e tente ajustar $\alpha$ para tentar fazer o código convergir ora num mínimo, ora no outro. O que acontece? O que você pode concluir sobre a escolha da taxa de aprendizado $\alpha$?
 
 <img src="Exercicio2.png" width="600"/>
-
 _**R:** Dependendo da taxa de aprendizado_ $\alpha$ _que escolho, o resultado pode convergir tanto para um como para o outro mínimo global da função._
+
 
 ## Exercício 3
 
 Repita o exercício 2, mas agora vamos manipular a altura dos mínimos somando uma reta em $U(x)$, tal que a função agora é $U(x) = x^2 (x-1)(x+1) + x/4$. O que acontece? O que você pode concluir sobre a escolha da taxa de aprendizado $\alpha$?
 
 <img src="Exercicio3.png" width="600"/>
+_**R:** Dependendo da taxa de aprendizado_ $\alpha$ _que escolho, o resultado pode convergir para o mínimo local da função, e não para o mínimo global._
+
 
 ## Exercício 4
 
@@ -46,3 +48,5 @@ b. Faça um gráfico do valor de $U(x_ {n}, r_ {n})$ a cada passo como função 
 <img src="Epoch.png" width="600"/>
 
 Varie a posição inicial $(x_ {0}, y_ {0})$ e a taxa de aprendizado $\alpha$ e veja como isso afeta a convergência do algoritmo. O que acontece se você aumentar muito a taxa de aprendizado? E se você diminuir muito? Você consegue atingir o mínimo global?
+
+_**R:** Se aumentar muito ou diminuirmos muito a taxa de aprendizado_ $\alpha$ _, o resultado não converge para o mínimo da função, pois os passos podem ficar muito grandes ou muito pequenos e, como delimitamos o número máximo de iterações em n=1000, pode ser que essa quantidade de iterações não seja suficiente._
