@@ -2,7 +2,8 @@
 
 ## Gradiente descendente
 
-O método do **gradiente descendente** é um algoritmo de otimização utilizado para minimizar funções. Ele é amplamente utilizado em aprendizado de máquina e redes neurais para ajustar os pesos e vieses de um modelo. Vamos aplicar o método para encontrar o mínimo de funções simples.
+O método do **gradiente descendente** é um algoritmo de otimização utilizado para minimizar funções. Ele é amplamente utilizado em aprendizado de máquina e redes neurais para ajustar os pesos e vieses de um modelo. 
+Na atividade 1, aplicamos o método em 4 exercícios diferentes para encontrar o mínimo de funções.
 
 O algoritmo é muito parecido com a dinâmica de uma partícula se movendo em um potencial e sujeita a muito atrito. Seja $U(\vec{r})$ a energia potencial, sabmos que a força que atua sobre a partícula é dada por: 
 
@@ -11,25 +12,6 @@ $$
 $$
 
 Note que a direção da força é oposta ao gradiente da função potencial. Daí vem o nome **gradiente descendente**.
-
-Considerando um intervalo de tempo infinitesimal $\Delta t$, podemos considerar a força constante durante esse intervalo. Assim, a variação da posição da partícula é dada pelo MRUV: $\Delta \vec{x} = \vec{v}_ {0} \Delta t + \frac{1}{2} \vec{a} \Delta t^2$, sendo $\vec{a} = \vec{F}/m$. Mas, se assumirmos que o atrito é muito grande, podemos assumir que a particula sempre para depois de cada passo $\Delta \vec{r}$, então $\vec{v}_ {0} = 0$ e a variação da posição da partícula é dada por:
-
-$$
-\Delta \vec{r} = \frac{1}{2} \vec{a} \Delta t^2 = -\alpha \nabla U(\vec{r})
-$$
-
-Onde definimos a constante $\alpha = \Delta t^2/2m$, que chamaremos de **taxa de aprendizado**, pois determina o tamanho do passo que daremos na direção do gradiente. 
-
-Assim, os passos do algoritmo para achar o mínimo de uma função $U(\vec{r})$ qualquer são:
-
-1. Inicializar a posição da partícula $\vec{r}_ {0}$.
-2. Calcular o gradiente $\nabla U(\vec{r})$ na posição atual $\vec{r}_ {0}$.
-3. Atualizar a posição da partícula: $\vec{r}_ {1} = \vec{r}_ {0} - \alpha \nabla U(\vec{r}_ {0})$.
-4. Considerar $\vec{r}_ {1}$ como a nova posição inicial da partícula e repetir os passos 2 e 3 em um loop da forma $\vec{r}_ {n} = \vec{r}_ {n-1} - \alpha \nabla U(\vec{r}_ {n-1})$.
-5. Interromper o loop quando a variação da posição for menor que um valor de tolerância $\epsilon$ ou quando o número máximo de iterações for atingido.
-6. Retornar a posição final da partícula $\vec{r}_ {n}$ como o mínimo da função $U(\vec{r})$.
-
-A descrição acima funciona para qualquer dimensionalidade. Mas nota-se que se a dimensionalidade for muito grande, como no caso de NNs, o cálculo do gradiente pode ser muito custoso. Para evitar isso, podemos usar o método de **gradiente descendente estocástico** (SGD). Veremos isso em outra etapa do curso.
 
 ## Exercício 1
 
