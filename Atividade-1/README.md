@@ -11,11 +11,11 @@ $$
 
 Sendo $\alpha$ a **taxa de aprendizado**, pois determina o tamanho do passo que daremos na direção do gradiente. 
 
-Sabendo disso, fizemos 4 exercícios diferentes para aplicar esse método e entender o seu funcionamento. Os códigos desenvolvidos para solucionar o problema estão nesta pasta
+A partir disso, resolvemos 4 exercícios diferentes para aplicar esse método e entender o seu funcionamento. Os códigos desenvolvidos para solucionar o problema estão nesta pasta:
 
-[Exercicio123](Exercicio_GD_123.py)
+[Exercicios 1, 2 e 3](Exercicio_GD_123.py)
 
-[Exercicio4](Exercicio_GD_4.py)
+[Exercicio 4](Exercicio_GD_4.py)
 
 
 ## Exercício 1
