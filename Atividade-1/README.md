@@ -25,6 +25,8 @@ Repita o exercício 1 para a função $U(x) = x^2 (x-1)(x+1)$. Esta função tem
 
 <img src="Exercicio2.png" width="600"/>
 
+_R: Dependendo da taxa de aprendizado ($\alpha$) que escolho, o resultado pode convergir tanto para um como para o outro mínimo global da função._
+
 ## Exercício 3
 
 Repita o exercício 2, mas agora vamos manipular a altura dos mínimos somando uma reta em $U(x)$, tal que a função agora é $U(x) = x^2 (x-1)(x+1) + x/4$. O que acontece? O que você pode concluir sobre a escolha da taxa de aprendizado $\alpha$?
