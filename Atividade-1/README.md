@@ -43,12 +43,12 @@ Considere agora uma função bidimensional $U(\vec{r}) = U(x,y) = \sin(x)\cos(y)
 
 a. Um gráfico de contorno (use `plt.imshow` ou `plt.pcolormesh`) da função $U(x,y)$ e desenhe a trajetória da partícula no gráfico.
 
-<img src="Exercicio4.png" width="600"/>
+<img src="Exercicio4.png" width="700"/>
 
 b. Faça um gráfico do valor de $U(x_ {n}, r_ {n})$ a cada passo como função das iterações (passos) $n$. No contexto de redes neurais chamaremos estes passos de **epochs**.
 
-<img src="Epoch.png" width="600"/>
+<img src="Epoch.png" width="500"/>
 
 Varie a posição inicial $(x_ {0}, y_ {0})$ e a taxa de aprendizado $\alpha$ e veja como isso afeta a convergência do algoritmo. O que acontece se você aumentar muito a taxa de aprendizado? E se você diminuir muito? Você consegue atingir o mínimo global?
 
-_**R:** Se aumentar muito ou diminuirmos muito a taxa de aprendizado_ $\alpha$ _, o resultado não converge para o mínimo da função, pois os passos podem ficar muito grandes ou muito pequenos e, como delimitamos o número máximo de iterações em n=1000, pode ser que essa quantidade de iterações não seja suficiente._
+_**R:** Se aumentarmos muito ou diminuirmos muito a taxa de aprendizado_ $\alpha$ _, o resultado não converge para o mínimo da função, pois os passos podem ficar muito grandes ou muito pequenos e, como delimitamos o número máximo de iterações em n=1000, pode ser que essa quantidade de iterações não seja suficiente._
