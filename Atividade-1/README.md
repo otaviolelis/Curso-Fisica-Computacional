@@ -11,7 +11,7 @@ $$
 
 Sendo $\alpha$ a **taxa de aprendizado**, pois determina o tamanho do passo que daremos na direção do gradiente. 
 
-A partir disso, resolvemos 4 exercícios diferentes para aplicar esse método e entender o seu funcionamento. Os códigos desenvolvidos para solucionar o problema estão nesta pasta:
+A partir disso, resolvemos 4 exercícios diferentes para aplicar esse método e entender o seu funcionamento. Os códigos em Python desenvolvidos para solucionar os problemas são:
 
 [Exercicios 1, 2 e 3](Exercicio_GD_123.py)
 
@@ -52,7 +52,7 @@ a. Um gráfico de contorno (use `plt.imshow` ou `plt.pcolormesh`) da função $U
 
 b. Faça um gráfico do valor de $U(x_ {n}, r_ {n})$ a cada passo como função das iterações (passos) $n$. No contexto de redes neurais chamaremos estes passos de **epochs**.
 
-<img src="Epoch.png" width="500"/>
+<img src="Epoch.png" width="600"/>
 
 Varie a posição inicial $(x_ {0}, y_ {0})$ e a taxa de aprendizado $\alpha$ e veja como isso afeta a convergência do algoritmo. O que acontece se você aumentar muito a taxa de aprendizado? E se você diminuir muito? Você consegue atingir o mínimo global?
 
