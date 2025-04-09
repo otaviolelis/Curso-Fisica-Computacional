@@ -25,7 +25,7 @@ Repita o exercício 1 para a função $U(x) = x^2 (x-1)(x+1)$. Esta função tem
 
 <img src="Exercicio2.png" width="600"/>
 
-_**R:** Dependendo da taxa de aprendizado $\alpha$ que escolho, o resultado pode convergir tanto para um como para o outro mínimo global da função._
+_**R:** Dependendo da taxa de aprendizado_ $\alpha$ _que escolho, o resultado pode convergir tanto para um como para o outro mínimo global da função._
 
 ## Exercício 3
 
