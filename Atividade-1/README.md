@@ -3,15 +3,12 @@
 ## Gradiente descendente
 
 O método do **gradiente descendente** é um algoritmo de otimização utilizado para minimizar funções. Ele é amplamente utilizado em aprendizado de máquina e redes neurais para ajustar os pesos e vieses de um modelo. 
-Na atividade 1, aplicamos o método em 4 exercícios diferentes para encontrar o mínimo de funções.
-
-O algoritmo é muito parecido com a dinâmica de uma partícula se movendo em um potencial e sujeita a muito atrito. Seja $U(\vec{r})$ a energia potencial, sabmos que a força que atua sobre a partícula é dada por: 
-
+O algoritmo é muito parecido com a dinâmica de uma partícula se movendo em um potencial e sujeita a muito atrito. E a variação da posição da partícula é dada por:
 $$
-\vec{F} = -\nabla U(\vec{r})
+\Delta \vec{r} = \frac{1}{2} \vec{a} \Delta t^2 = -\alpha \nabla U(\vec{r})
 $$
+Sendo $\alpha a **taxa de aprendizado**, pois determina o tamanho do passo que daremos na direção do gradiente. 
 
-Note que a direção da força é oposta ao gradiente da função potencial. Daí vem o nome **gradiente descendente**.
 
 ## Exercício 1
 
