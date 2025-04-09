@@ -24,6 +24,7 @@ Implemente o algoritmo de gradiente descendente para encontrar o mínimo da fun�
 Repita o exercício 1 para a função $U(x) = x^2 (x-1)(x+1)$. Esta função tem dois mínimos globais. Use $x_ {0} = 2$ e tente ajustar $\alpha$ para tentar fazer o código convergir ora num mínimo, ora no outro. O que acontece? O que você pode concluir sobre a escolha da taxa de aprendizado $\alpha$?
 
 <img src="Exercicio2.png" width="600"/>
+
 _**R:** Dependendo da taxa de aprendizado_ $\alpha$ _que escolho, o resultado pode convergir tanto para um como para o outro mínimo global da função._
 
 
@@ -32,6 +33,7 @@ _**R:** Dependendo da taxa de aprendizado_ $\alpha$ _que escolho, o resultado po
 Repita o exercício 2, mas agora vamos manipular a altura dos mínimos somando uma reta em $U(x)$, tal que a função agora é $U(x) = x^2 (x-1)(x+1) + x/4$. O que acontece? O que você pode concluir sobre a escolha da taxa de aprendizado $\alpha$?
 
 <img src="Exercicio3.png" width="600"/>
+
 _**R:** Dependendo da taxa de aprendizado_ $\alpha$ _que escolho, o resultado pode convergir para o mínimo local da função, e não para o mínimo global._
 
 
