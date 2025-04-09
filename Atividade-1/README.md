@@ -13,6 +13,10 @@ Sendo $\alpha$ a **taxa de aprendizado**, pois determina o tamanho do passo que 
 
 Sabendo disso, fizemos 4 exercícios diferentes para aplicar esse método e entender o seu funcionamento. Os códigos desenvolvidos para solucionar o problema estão nesta pasta
 
+[Exercicio123](Exercicio_GD_123.py)
+
+[Exercicio4](Exercicio_GD_4.py)
+
 
 ## Exercício 1
 
