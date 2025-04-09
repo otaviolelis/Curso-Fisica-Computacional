@@ -36,6 +36,7 @@ A descrição acima funciona para qualquer dimensionalidade. Mas nota-se que se 
 Implemente o algoritmo de gradiente descendente para encontrar o mínimo da função $U(x) = x^2 -1$. É um caso bem simples para o qual sabemos a solução exata. Ilustre o algoritimo com um gráfico mostrando a função $U(x)$ e a trajetória da partícula. Use inicialmente uma taxa de aprendizado $\alpha = 0.1$ e uma tolerância $\epsilon = 0.01$. O número máximo de iterações deve ser 1000. A posição inicial da partícula deve ser $x_ {0} = 5$. Depois, varie estes parâmetros para ver como eles afetam a convergência do algoritmo.
 
 ![Exercicio1](Exercicio1.png)
+<img src="Exercicio1.png" width="300"/>
 
 ## Exercício 2
 
