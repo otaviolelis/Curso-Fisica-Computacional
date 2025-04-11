@@ -4,4 +4,6 @@ Esse repositório contém projetos desenvolvidos em um curso de Física Computac
 
 O objetivo principal é entender o funcionamento de Redes Neurais e aprender ferramentas necessárias para desenvolver uma rede neural simples do zero usando Python e NumPy.
 
-[Atividade 01 ](Curso-Fisica-Computacional/dAtividade-1/)
+A estrura desse repositório está organizado da seguinte forma:
+
+[Atividade 01 ](Curso-Fisica-Computacional/dAtividade-1/) : Desenvolvimento de um algoritmo para entender o método Gradiente Descendente utilizado para achar mínimo de funções;
