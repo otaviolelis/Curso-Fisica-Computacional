@@ -10,7 +10,7 @@ class particula():
         self.px = [self.x]
         self.py = [self.y]
 
-    def newton(self, fx, fy, dt):
+    def newton(self, fx, fy, dt): #(Força em x, Força em y, variação do tempo)
 
       if self.y >= 0:
         #Calcula a aceleração
