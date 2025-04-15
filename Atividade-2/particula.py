@@ -5,7 +5,7 @@ class particula():
         self.y = y #Posição y inicial
         self.vx = vx #Velocidade x inicial
         self.vy = vy #Velocidade y inicial
-        self.massa = massa 
+        self.massa = massa #Massa da partícula
 
         self.px = [self.x]
         self.py = [self.y]
@@ -13,20 +13,15 @@ class particula():
     def newton(self, fx, fy, dt):
 
       if self.y >= 0:
-
+        #Calcula a aceleração
         ax = fx / self.massa #a = F/m
         ay = fy / self.massa
-
-        vvx = self.vx + ax * dt #V = V0 + at
-        vvy = self.vy + ay * dt
-
-        xx = self.x + self.vx * dt + ax * dt**2 / 2 #S = S0 + V0t + at^2/2
-        yy = self.y + self.vy * dt + ay * dt**2 / 2
-
-        self.x = xx
-        self.y = yy
-        self.vx = vvx
-        self.vy = vvy
+        #Atualiza a velocidade
+        self.vx = self.vx + ax * dt #V = V0 + at
+        self.vy = self.vy + ay * dt
+        #Atualiza a posição
+        self.x = self.x + self.vx * dt + ax * dt**2 / 2 #S = S0 + V0t + at^2/2
+        self.y = self.y + self.vy * dt + ay * dt**2 / 2
 
         self.px.append(self.x)
         self.py.append(self.y)
