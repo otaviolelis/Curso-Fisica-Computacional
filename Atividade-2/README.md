@@ -12,8 +12,8 @@ Nesta atividade, vamos explorar esses fundamentos e criar uma classe chamada `pa
   - `massa`: massa da partícula
 
 E os seguintes métodos:
-    - `__init__(self, x, y, vx, vy, massa)`: construtor da classe que inicializa os atributos da partícula.
-    - `newton(self, fx, fy, dt)`: aplica a segunda lei de Newton para atualizar a velocidade e a posição da partícula com base nas forças `(fx, fy)` aplicadas e no intervalo de tempo `dt`. Considerar que a força é constante durante o intervalo de tempo `dt`.
+  - `__init__(self, x, y, vx, vy, massa)`: construtor da classe que inicializa os atributos da partícula.
+  - `newton(self, fx, fy, dt)`: aplica a segunda lei de Newton para atualizar a velocidade e a posição da partícula com base nas forças `(fx, fy)` aplicadas e no intervalo de tempo `dt`. Considerar que a força é constante durante o intervalo de tempo `dt`.
 
 Essa classe foi implementada no arquivo [particula.py](particula.py)
 
