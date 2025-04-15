@@ -22,6 +22,6 @@ Nesta atividade, vamos explorar fundamentos de orientação a objetos em python.
 
 Criamos uma particula inicialmente na posição (x,y) = (0,0), com velocidade (vx,vy) = (10,10) m/s, e massa m = 1 kg. Consideraremos apenas a força da gravidade, (fx, fy) = (0, -9.8) N. A cada dt = 0.1 s, aplique a força da gravidade e atualize a posição e velocidade da partícula. Salve a posição, velocidade e tempo em listas ou arrays para posterior plotagem. Interrompa o loop quando a partícula atingir o solo (y <= 0). Faça um gráfico da trajetória da partícula
 
-<img src="Exercicio1.png" width="600"/>
+<img src="Exemplo1.png" width="600"/>
 
  *O código desenvolvido para esse problema está em [Exemplo01](Exemplo01.py)
