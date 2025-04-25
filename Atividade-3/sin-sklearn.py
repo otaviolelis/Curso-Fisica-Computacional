@@ -18,13 +18,13 @@ sin_values_train += noise
 
 # Define the model
 model = MLPRegressor(
-    hidden_layer_sizes=(10,10,10),  # One hidden layer with 10 neurons
-    activation='tanh',         # Rectified Linear Unit activation function
-    solver='adam',             # Optimization algorithm
-    max_iter=100000,             # Maximum number of iterations
-    random_state=42,            # For reproducibility,
-    learning_rate_init = 0.001,
-    tol = 1e-8
+    hidden_layer_sizes=(10,10,10),  # 3 hidden layer with 10 neurons
+    activation='tanh',              # Rectified Linear Unit activation function
+    solver='adam',                  # Optimization algorithm
+    max_iter=100000,                # Maximum number of iterations
+    random_state=42,                # For reproducibility,
+    learning_rate_init = 0.001,     # Initial learning rate
+    tol = 1e-8                      # Tolerance
 )
 
 # Train the model
@@ -38,7 +38,7 @@ sin_values_true = np.sin(angles_test)
 # 4. Make Predictions
 sin_values_predicted = model.predict(angles_test)
 
-# 5. Evaluate the Model (Optional, but good practice)
+# 5. Evaluate the Model
 from sklearn.metrics import mean_squared_error
 mse = mean_squared_error(sin_values_true, sin_values_predicted)
 print(f"Mean Squared Error on Test Data: {mse}")
