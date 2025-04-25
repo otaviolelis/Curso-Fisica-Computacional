@@ -26,6 +26,3 @@ Variamos o ângulo de lançamento da partícula e plotamos os gráficos das traj
 <img src="Exemplo1.png" width="600"/>
 
 Pela imagem, concluimos que o alcance máximo da partícula se dá com o ângulo de lançamento de 45°. O código desenvolvido para esse problema está em [Exemplo01.py](Exemplo01.py)
-
-
-## Exemplo 2: 
