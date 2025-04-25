@@ -66,20 +66,20 @@ def treinar_modelo(modelo, x_treino, y_treino, epocas=1000, learning_rate=0.01):
     return historico_perdas
 
 def interpolar_seno_pytorch(num_camadas, num_neuronios, nome_funcao_ativacao, num_epocas=1000):
-    # 1. Gerar dados de treinamento
+    # Gerar dados de treinamento
     x_treino, y_treino = gerar_dados_seno(num_pontos=100)
-    # 2. Escolher a função de ativação
+    # Escolher a função de ativação
     try:
         funcao_ativacao = escolher_funcao_ativacao(nome_funcao_ativacao)
     except ValueError as e:
         print(f"Erro: {e}")
         return
 
-    # 3. Criar o modelo da rede neural
+    # Criar o modelo da rede neural
     modelo = Net(num_camadas, num_neuronios, funcao_ativacao)
-    # 4. Treinar o modelo
+    # Treinar o modelo
     historico_perdas = treinar_modelo(modelo, x_treino, y_treino, epocas=num_epocas)
-    # 6. Gerar dados para visualização da interpolação
+    # Gerar dados para visualização da interpolação
     x_teste_np = np.linspace(0, 2 * np.pi, 100).reshape(-1, 1).astype(np.float32)
     x_teste = torch.tensor(x_teste_np)
     modelo.eval() # Coloca o modelo em modo de avaliação
@@ -87,7 +87,7 @@ def interpolar_seno_pytorch(num_camadas, num_neuronios, nome_funcao_ativacao, nu
         y_pred = modelo(x_teste).numpy()
     y_verdadeiro = np.sin(x_teste_np)
   
-    # 7. Plotar os resultados
+    # Plotar os resultados
     plt.figure(figsize=(10, 6))
     plt.scatter(x_treino.numpy(), y_treino.numpy(), label='Dados de Treinamento', alpha=0.7)
     plt.plot(x_teste_np, y_verdadeiro, label='Função Seno Verdadeira', color='blue')
@@ -95,12 +95,11 @@ def interpolar_seno_pytorch(num_camadas, num_neuronios, nome_funcao_ativacao, nu
     plt.xlabel(rf'$\theta$')
     plt.ylabel(rf'sen($\theta$)')
     plt.title('Interpolação da Função Seno')
-    plt.savefig('pythorch-seno.png', dpi=300)
     plt.legend()
     plt.grid(True)
     plt.show(block=True)
 
-    # 8. Plotar a curva de perda
+    # Plotar a curva de perda
     plt.figure(figsize=(10, 4))
     plt.plot(historico_perdas)
     plt.xlabel('Época')
