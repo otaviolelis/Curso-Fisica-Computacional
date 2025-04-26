@@ -59,7 +59,7 @@ print(f"Mean Squared Error on Test Data: {mse}")
 
 # 6. Plotar os gráficos
 plt.figure(figsize=(10, 6))
-plt.plot(x_teste, dy_true, label='derivada real', color='green')
+plt.plot(x_teste, dy_true, label='derivada real', color='blue')
 plt.plot(x_teste, dy_predicted, label='derivada prevista', color='red')
 plt.xlabel('x')
 plt.ylabel('y')
