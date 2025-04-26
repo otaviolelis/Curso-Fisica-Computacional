@@ -27,7 +27,10 @@ Além disso, treinamos a Rede Neural para interpolar outras funções para ver c
  * Interpolaçao da função gaussiana $e^{-x^2}$:
 <img src="sklearn-gaus.png" width="600"/>
 
-Anote tudo que aprender na forma de um relatório informal, mas organizado. Pode ser um arquivo markdown ou um jupyter notebook que serão salvos no seu github. 
+Por fim, extrapolamos nosso intervalo de validação para ver como a Rede Neural se comportaria, e, em todos os casos, ela não conseguiu prever o resultado fora do intervalo de treinamento. Ou seja, ela não conseguiu prever o futuro. Esse comportamento é mostrado na imagem abaixo, onde treinamos a rede no intervalo de 0 a 2π, e pedimos para ela interpolar a função seno no intervalo de 0 a 4π.
+
+ * Extrapolação do intervalo de treinamento:
+<img src="sklearn-seno-3x10-2.png" width="600"/>
 
 ### Instruções básicas
 
