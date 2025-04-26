@@ -10,13 +10,22 @@ Primeiramente, desenvolvemos um código utilizando a biblioteca Scikit-learn par
 
  * Rede Neural com 1 camada oculta de 3 neurônios:
 <img src="sklearn-seno-1x3.png" width="600"/>
-* Rede Neural com 3 camadas ocultas de 10 neurônios:
+
+ * Rede Neural com 3 camadas ocultas de 10 neurônios:
 <img src="sklearn-seno-3x10.png" width="600"/>
 
+Observamos então que, conforme aumentamos o número de camadas e de neurônios, os resultados são mais assertivos. Nesse caso, utilizamos 100 amostras de treinamento. Se utilizarmos poucas amostras para treinar o modelo, o resultado também fica mais discrepante que o esperado, como podemos ver na imagem abaixo:
 
-Em todos os casos, use MSE para a fução de perda (loss), otimizador Adam e funções de ativação `tanh`. Varie o número de camadas ocultas e neurônios por camada para ver como afetam o resultado. 
+ * Rede Neural treinada com apenas 10 amostras:
+<img src="sklearn-seno-poucas-amostras.png" width="600"/>
 
-Há muitos outros parâmetros que podem ser ajustados, como a taxa de aprendizado, número de épocas, batch size, número de pontos. Procure entender o que são estes parâmetros e como afetam os resultados.
+Além disso, treinamos a Rede Neural para interpolar outras funções para ver como isso afetaria os resultados, e percebemos que funções mais complexas, como sync(x) = sin(x)/x, são mais difíceis de interpolar, utilizando os mesmos parâmetros e os mesmos números de camadas ocultas e neurônios. Os exemplos abaixo também foram treinados com 100 amostras, com um modelo de 3 camadas ocultas de 10 neurônios, num intervalo de -10 a 10.
+
+ * Interpolação da função sync(x) = sin(x)/x:
+<img src="sklearn-sync.png" width="600"/>
+
+ * Interpolaçao da função gaussiana $e^{-x^2}$:
+<img src="sklearn-gaus.png" width="600"/>
 
 Anote tudo que aprender na forma de um relatório informal, mas organizado. Pode ser um arquivo markdown ou um jupyter notebook que serão salvos no seu github. 
 
