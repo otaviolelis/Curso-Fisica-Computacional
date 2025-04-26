@@ -10,4 +10,4 @@ A estrutura desse repositório está organizada da seguinte forma:
 
 * [Atividade 02 ](Atividade-2) : Criação de uma classe para resolver um problema físico e explorar os fundamentos de **Orientação a Objetos**;
 
-* [Atividade 03 ](Atividade-3) : Treinamento de **Redes Neurais** para resolver problemas básicos, como interpolação de funções e cálculo de derivadas, implementadas via **Scikit-learn** e **Pytorch**;
+* [Atividade 03 ](Atividade-3) : Treinamento de **Redes Neurais** (via **Scikit-learn** e **Pytorch**) para resolver problemas básicos, como interpolação de funções e cálculo de derivadas;
