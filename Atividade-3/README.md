@@ -8,7 +8,9 @@ Nesta atividade, utilizamos as bibliotecas **Scikit-learn** e **Pytorch** para t
 
 Primeiramente, desenvolvemos um código utilizando a biblioteca Scikit-learn para interpolar uma função seno no intervalo de 0 a 2π. Em todos os casos, usamos MSE para a fução de perda (loss), otimizador Adam e funções de ativação `tanh`. Variamos o número de camadas ocultas e neurônios por camada e obtivemos os seguintes resultados:
 
+ * Rede Neural com 1 camada oculta de 3 neurônios:
 <img src="sklearn-seno-1x3.png" width="600"/>
+* Rede Neural com 3 camadas ocultas de 10 neurônios:
 <img src="sklearn-seno-3x10.png" width="600"/>
 
 
