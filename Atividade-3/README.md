@@ -19,7 +19,9 @@ Observamos então que, conforme aumentamos o número de camadas e de neurônios,
  * Rede Neural treinada com apenas 10 amostras:
 <img src="sklearn-seno-poucas-amostras.png" width="600"/>
 
-Além disso, treinamos a Rede Neural para interpolar outras funções para ver como isso afetaria os resultados, e percebemos que funções mais complexas, como sync(x) = sin(x)/x, são mais difíceis de interpolar, utilizando os mesmos parâmetros e os mesmos números de camadas ocultas e neurônios. Os exemplos abaixo também foram treinados com 100 amostras, com um modelo de 3 camadas ocultas de 10 neurônios, num intervalo de -10 a 10.
+Entretanto, cabe ressaltar que o excesso de parâmetros pode levar a um overfitting do modelo. 
+
+Depois, treinamos a Rede Neural para interpolar outras funções para ver como isso afetaria os resultados, e percebemos que funções mais complexas, como sync(x) = sin(x)/x, são mais difíceis de interpolar, utilizando os mesmos parâmetros e os mesmos números de camadas ocultas e neurônios. Os exemplos abaixo também foram treinados com 100 amostras, com um modelo de 3 camadas ocultas de 10 neurônios, num intervalo de -10 a 10.
 
  * Interpolação da função sync(x) = sin(x)/x:
 <img src="sklearn-sync.png" width="600"/>
@@ -32,21 +34,18 @@ Por fim, extrapolamos nosso intervalo de validação para ver como a Rede Neural
  * Extrapolação do intervalo de treinamento:
 <img src="sklearn-seno-3x10-2.png" width="600"/>
 
-### Instruções básicas
+Todos esses gráficos e análises foram feitos a partir dos códigos [Seno Sklearn](sin-sklearn.py) e [Sync/Gauss Sklearn](sync-gaus-sklearn.py).
 
-Eu vou enviar por email um exemplo de implementação em scikit-learn para vocês explorarem. Façam o mesmo com PyTorch ou TensorFlow.
+## Usando Pytorch
 
-Treinem a rede neural para interpolar algumas funções e procurem entender como o número de camadas e neurônios afetam o resultado. Lembrem-se que excesso de parâmetros pode levar a overfitting.
+Também desenvolvemos um código utilizando Pytorch para treinar a rede neural a interpolar uma função seno, da mesma forma que fizemos utilizando Sklearn, apenas para fins didáticos. O objetivo era comparar os modelos e se habituar com esse tipo de biblioteca. O resultado foi o seguinte:
 
-Funções de teste para treinar:
+ * Rede Neural com 3 camadas ocultas de 10 neurônios:
+<img src="pytorch-seno.png" width="600"/>
 
-- seno, cosseno, tangente no intervalo de 0 a 2π
-- função sync(x) = sin(x)/x no intervalo de -10 a 10
-- função gaussiana no intervalo de -10 a 10
+O código desenvolvido para esse modelo é: [Seno Pytorch](sin-pytorch.py)
 
-### Treinar derivadas
-
-**Aviso:** Eu nunca fiz este exemplo, pode ser que não funcione da forma enunciada. Caso necessário faça alterações e vamos tentar fazer funcionar.
+## Treinar derivadas
 
 Vamos tentar ensinar a rede neural a calcular derivadas numéricas. Para isso, vamos definir um domínio comum de 0 a 2π a fim de depois testar com funções trigonométricas.
 
