@@ -2,13 +2,15 @@
 
 ## Redes neurais simples
 
-Na pasta **NNFS** ilustramos o funcionamento básico de uma rede neural e a utilizamos para fazer um treinamento ilustrativo onde a rede neural simplesmente aprendeu a interpolar uma função seno no intervalo de 0 a 2π. Vimos que qualquer tentativa de extrapolação falha.
+Nesta atividade, utilizamos as bibliotecas **Scikit-learn** e **Pytorch** para treinar uma rede neural a aprender a interpolar funções básicas. O objetivo principal é aprender a usar essas ferramentas e entender como as variações dos parâmetros afetam os resultados.
 
-Nesta atividade, vocês farão a mesma coisa, treinar redes neurais para interpolar funções seno, mas...
+## Usando Scikit-learn
 
-1. Implementar via PyTorch
-2. Implementar via TensorFlow
-3. Implementar via scikit-learn
+Primeiramente, desenvolvemos um código utilizando a biblioteca Scikit-learn para interpolar uma função seno no intervalo de 0 a 2π. Em todos os casos, usamos MSE para a fução de perda (loss), otimizador Adam e funções de ativação `tanh`. Variamos o número de camadas ocultas e neurônios por camada e obtivemos os seguintes resultados:
+
+<img src="sklearn-seno-1x3.png" width="300"/>
+<img src="sklearn-seno-3x10.png" width="300"/>
+
 
 Em todos os casos, use MSE para a fução de perda (loss), otimizador Adam e funções de ativação `tanh`. Varie o número de camadas ocultas e neurônios por camada para ver como afetam o resultado. 
 
