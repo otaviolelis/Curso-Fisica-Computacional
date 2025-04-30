@@ -34,7 +34,7 @@ Por fim, extrapolamos nosso intervalo de validação para ver como a Rede Neural
  * Extrapolação do intervalo de treinamento:
 <img src="sklearn-seno-3x10-2.png" width="600"/>
 
-Todos esses gráficos e análises foram feitos a partir dos códigos [Seno Sklearn](sin-sklearn.py) e [Sync/Gauss Sklearn](sync-gaus-sklearn.py).
+Todos esses gráficos e análises foram feitos a partir dos códigos: [Seno Sklearn](sin-sklearn.py) e [Sync/Gauss Sklearn](sync-gaus-sklearn.py).
 
 ## Usando Pytorch
 
@@ -47,14 +47,15 @@ O código desenvolvido para esse modelo é: [Seno Pytorch](sin-pytorch.py)
 
 ## Treinar derivadas
 
-Vamos tentar ensinar a rede neural a calcular derivadas numéricas. Para isso, vamos definir um domínio comum de 0 a 2π a fim de depois testar com funções trigonométricas.
+Nesse exercício, treinamos uma Rede Neural (via Scikit-learn) para calcular derivadas numéricas. Para isso, usamos como input 50 valores de x (entre -1 e 1), os correspondentes valores de 10000 polinômios aleatórios de grau máximo 9, e as respectivas derivadas. O objetivo final era testar o modelo para calcular a derivada de funções trigonométricas, sendo treinado apenas com polinômios. Obtivemos o seguinte resultado:
 
-Use como input N pontos gerados por polinômios, e como output a sua derivada. Varie a potência p de 0 a 10 ao longo do treinamento.
+ * Treinamento inicial
+<img src="sklearn-derivada-1.png" width="600"/>
 
-```python
-x = np.random.random(0, 2*np.pi)
-x_input  = x ** p
-x_output = p * x ** (p-1)
-```
+Depois disso, visando melhorar o resultado, refinamos nossos dados de entrada e treinamos nosso modelo só com polinômios aleatórios de graus ímpares e de graus pares. O resultado final foi o seguinte:
 
-Finalizado o treinamento, faça um teste (predict) usando uma função trigonométrica como input e verifique se o output retorna sua derivada!
+ * Refinando os dados de treinamento:
+<img src="sklearn-derivada-2.png" width="600"/>
+
+Observamos uma melhora considerável nos resultados. Para esse exercício, desenvolvemos o código: [Derivadas Sklearn](sklearn-derivadas.py)
+
