@@ -45,14 +45,14 @@ Também desenvolvemos um código utilizando Pytorch para treinar a rede neural a
 
 O código desenvolvido para esse modelo é: [Seno Pytorch](sin-pytorch.py)
 
-## Treinar derivadas
+## Treinando derivadas
 
 Nesse exercício, treinamos uma Rede Neural (via Scikit-learn) para calcular derivadas numéricas. Para isso, usamos como input 50 valores de x (entre -1 e 1), os correspondentes valores de 10000 polinômios aleatórios de grau máximo 9, e as respectivas derivadas. O objetivo final era testar o modelo para calcular a derivada de funções trigonométricas, sendo treinado apenas com polinômios. Obtivemos o seguinte resultado:
 
  * Treinamento inicial
 <img src="sklearn-derivada-1.png" width="600"/>
 
-Depois disso, visando melhorar o resultado, refinamos nossos dados de entrada e treinamos nosso modelo só com polinômios aleatórios de graus ímpares e de graus pares. O resultado final foi o seguinte:
+Depois disso, visando melhorar o resultado, refinamos nossos dados de entrada e treinamos nosso modelo só com polinômios aleatórios de graus ímpares e de graus pares (para se aproximar um pouco de uma expansão de Taylor). O resultado final foi o seguinte:
 
  * Refinando os dados de treinamento:
 <img src="sklearn-derivada-2.png" width="600"/>
