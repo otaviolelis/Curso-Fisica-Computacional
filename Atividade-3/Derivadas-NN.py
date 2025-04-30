@@ -7,31 +7,36 @@ from sklearn.metrics import mean_squared_error
 np.random.seed(42)
 
 def generate_data(nx, qtde, pmax):
-    x = np.linspace(-1, 1, nx).reshape(-1, 1)
-    y = []
+    x =  np.linspace(-1, 1, nx).reshape(-1, 1)
+    y =  []
     dy = []
     
     for _ in range(qtde):
-        # potencial de grau p aleatório
+        # polinômio de grau p aleatório
         p = np.random.randint(0, pmax + 1)
-        
-        # polinomio de grau p aleatório
-        coeffs = np.random.randn(p + 1)
+        # coeficientes aleatórios
+        coeffs = np.random.randint(-6, 6, p+1)
+        # cria uma lista do tipo [1,0,1,0...] para anular os coeficientes pares ou impares do polinomio
+        lista = [(j+1) % 2 for j in range(p+1)] 
+        coeffs = coeffs*np.array(lista)
+        # Cria o polinômio com um ruído
         polinomio = np.polyval(coeffs, x)
         noise = 0.1 * np.random.randn(len(x)).reshape(-1, 1)
-        y.append(polinomio / np.max(np.abs(polinomio)) + noise)
+        polinomio = polinomio + noise
+        y.append(polinomio / np.max(np.abs(polinomio)))
         
         # derivada
         noise = 0.1 * np.random.randn(len(x)).reshape(-1, 1)
-        dy.append(np.polyval(np.polyder(coeffs), x) / np.max(np.abs(polinomio)) + noise)
+        derivada = np.polyval(np.polyder(coeffs), x) + noise
+        dy.append(derivada / np.max(np.abs(derivada)))
     
     # empilha dados
-    y = np.hstack(y).T
+    y =  np.hstack(y).T
     dy = np.hstack(dy).T
     return y, dy
 
 # gerar dados
-y, dy = generate_data(20, 100, 10)
+y, dy = generate_data(50, 10000, 9)
 
 print(y.shape)
 print(dy.shape)
@@ -66,7 +71,7 @@ print(f"Mean Squared Error: {mse}")
 
 plt.figure(figsize=(10, 4))
 
-new_x = np.linspace(0, 1, y.shape[1]).reshape(1,-1)
+new_x = np.linspace(-0.5, 0.5, y.shape[1]).reshape(1,-1)
 
 # test 1
 plt.subplot(131)
