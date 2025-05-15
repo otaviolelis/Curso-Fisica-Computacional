@@ -47,9 +47,9 @@ Então, para melhorar os resultados, implementamos uma PINN incluindo as restri�
 <img src="Previsão-com-PINN.png" width="600"/>
 
 
-Logo, podemos concluir que ... O código dessa parte está em: [PINN](PINN.py)
+Por fim, implementamos a PINN sem conhecer o valor da taxa $r$, e pedimos para a rede descobrir o valor correto. Nesse caso, o $r$ descoberto foi de 0.006. O código dessa parte está em: [PINN](PINN.py) e [Descrobrir r](Descobrir-r.py)
 
-4. Por fim, implementamos a PINN sem conhecer o valor da taxa $r$. A rede deve ser capaz de descobrir o valor correto. Compare com a solução analítica e com a NN de regressão simples.
+Assim, podemos concluir que PINNs são uma forma de otimizar sua Rede Neural quando você tem um conhecimento prévio sobre como suas entradas  e saídas interagem. Em cenários em que há poucos dados disponíveis, mas que você possui algum conhecimento sobre eles, PINNs podem ser muito úteis para aprender outras dependências presentes nos dados.
 
 
 ## Exercício 2
