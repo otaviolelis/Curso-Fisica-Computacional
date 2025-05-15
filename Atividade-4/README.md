@@ -12,7 +12,7 @@ A primeira condição é a minimização do **erro dos dados**, que já usamos n
 
 ## Exercício 1
 
-1. Neste exercício, resolvemos analiticamente a EDO do resfriamento de uma caneca de café:
+Neste exercício, resolvemos analiticamente a EDO do resfriamento de uma caneca de café:
 
 ```math
    \frac{dT}{dt} = r(T_{amb} - T)
@@ -24,24 +24,28 @@ E depois resolvemos a mesma EDO usando o método de **Runge-Kutta** de quarta or
  * Comparação entre a solução analítica e o método de Runge-Kutta:
 <img src="ComparaçãoRK.png" width="600"/>
 
+
 O código desenvolvido para essa primeira parte foi: [Runge Kutta Scipy](Runge-Kutta-Scipy.py)
 
-2. Depois geramos dados sintéticos para treinar a NN e fizemos a interpolação da função do resfriamento, da mesma forma como interpolamos a função seno na atividade anterior. O resultado foi o seguinte:
+Depois geramos dados sintéticos para treinar a NN e fizemos a interpolação da função do resfriamento, da mesma forma como interpolamos a função seno na atividade anterior. O resultado foi o seguinte:
 
  * Interpolação da função do resfriamento:
 <img src="Interpolação1.png" width="600"/>
+
 
 Alteramos os dados para ver se a NN conseguiria prever o resfriamento quando extrapolado o intervalo de treinamento. E o resultado foi esse:
 
  * Previsão da NN:
 <img src="Previsão-sem-PINN.png" width="600"/>
 
+
 Ou seja, a Rede Neural não conseguiu prever o comportamento físico real. Essa parte foi desenvolvida no código: [NN sem PINN](NN-normal.py)
 
-3. Então, para melhorar os resultados, implementamos uma PINN incluindo as restrições físicas na minimização da perda, mas assumindo que conhecemos o valor da taxa $r = 0.005$ 1/s. O resultado foi bem melhor, como pode ser visto na imagem abaixo:
+Então, para melhorar os resultados, implementamos uma PINN incluindo as restrições físicas na minimização da perda, mas assumindo que conhecemos o valor da taxa $r = 0.005$ 1/s. O resultado foi bem melhor, como pode ser visto na imagem abaixo:
 
  * Previsão da PINN:
 <img src="Previsão-com-PINN.png" width="600"/>
+
 
 Logo, podemos concluir que ... O código dessa parte está em: [PINN](PINN.py)
 
