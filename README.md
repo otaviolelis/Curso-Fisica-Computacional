@@ -11,3 +11,5 @@ A estrutura desse repositório está organizada da seguinte forma:
 * [Atividade 02 ](Atividade-2) : Criação de uma classe para resolver um problema físico e explorar os fundamentos de **Orientação a Objetos**;
 
 * [Atividade 03 ](Atividade-3) : Treinamento de **Redes Neurais** (via **Scikit-learn** e **Pytorch**) para resolver problemas básicos, como interpolação de funções e cálculo de derivadas;
+
+* [Atividade 04 ](Atividade-4) : Desenvolvimento de uma **Rede Neural Informada por Física (PINNs)** em Pytorch para prever o comportamento físico de resfriamento;
