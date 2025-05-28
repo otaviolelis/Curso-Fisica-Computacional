@@ -71,8 +71,9 @@ for epoch in range(num_epochs):
     t_phys = torch.linspace(0, 1000, 100).unsqueeze(1)
     res = physics_residual(t_phys)
     loss_phys = criterion(res, torch.zeros_like(res))
+    peso = 1
 
-    loss = loss_data + loss_phys
+    loss = loss_data + peso*loss_phys
     loss.backward()
     optimizer.step()
 
