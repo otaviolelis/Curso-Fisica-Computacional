@@ -15,3 +15,7 @@ A estrutura desse repositório está organizada da seguinte forma:
 * [Atividade 04 ](Atividade-4) : Desenvolvimento de uma **Rede Neural Informada por Física (PINNs)** em Pytorch para prever o comportamento físico de resfriamento;
 
 * [Atividade 05 ](Atividade-5) : Compilação do **Quantum Espresso** e resolução de um problema simples das bandas do grafeno;
+
+* [Atividade 06 ](Atividade-5) :
+
+* [NNFS ](NNFS) : Implementação simples de uma **Rede Neural do Zero** (Neural Network From Scratch).
