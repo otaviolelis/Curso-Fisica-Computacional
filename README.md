@@ -16,6 +16,6 @@ A estrutura desse repositório está organizada da seguinte forma:
 
 * [Atividade 05 ](Atividade-5) : Compilação do **Quantum Espresso** e resolução de um problema simples das bandas do grafeno;
 
-* [Atividade 06 ](Atividade-5) :
+* [Atividade 06 ](Atividade-6) : Cálculo da estrutura de bandas de materiais resolvendo a equação de Schrödinger com uma **expansão da função de Bloch no espaço k**;
 
 * [NNFS ](NNFS) : Implementação simples de uma **Rede Neural do Zero** (Neural Network From Scratch).
