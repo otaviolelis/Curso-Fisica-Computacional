@@ -13,3 +13,5 @@ A estrutura desse repositório está organizada da seguinte forma:
 * [Atividade 03 ](Atividade-3) : Treinamento de **Redes Neurais** (via **Scikit-learn** e **Pytorch**) para resolver problemas básicos, como interpolação de funções e cálculo de derivadas;
 
 * [Atividade 04 ](Atividade-4) : Desenvolvimento de uma **Rede Neural Informada por Física (PINNs)** em Pytorch para prever o comportamento físico de resfriamento;
+
+* [Atividade 05 ](Atividade-5) : Compilação do **Quantum Espresso** e resolução de um problema simples das bandas do grafeno;
