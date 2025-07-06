@@ -84,9 +84,7 @@ Fizemos, então, um código que diagonalize este Hamiltoniano para k no interval
 
 ## Exercício 2 - Caso 1D com V(x)
 
-Escolhemos uma função para $V(x)$ que respeite $V(x) = V(x+R)$ com $R=1$:
-
-$$V(x) = A \cos(2\pi q x)$$
+Escolhemos uma função para $V(x)$ que respeite $V(x) = V(x+R)$ com $R=1$: $V(x) = A \cos(2\pi q x)$
 
 <img src="exercicio2-1.png" width="600"/>
 
