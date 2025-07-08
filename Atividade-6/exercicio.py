@@ -25,7 +25,7 @@ def compute_bands(N, alpha, num_k, num_bands):
 
 # Parâmetros ajustáveis
 N          = 7      # número de vetores G de cada lado
-alpha      = 10     # intensidade do potencial periódico
+alpha      = 1     # intensidade do potencial periódico
 num_k      = 400    # resolução em k
 num_bands  = 7      # quantas bandas mostrar
 
