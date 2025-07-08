@@ -6,13 +6,13 @@ from scipy.integrate import quad
 N = 1  # número de ondas planas (número de Gs)
 G_vals = np.arange(-N, N + 1) * 2 * np.pi  # vetores de rede recíproca
 k_vals = np.linspace(-np.pi, np.pi, 300)  # 1ª zona de Brillouin
-q = 10  # frequência do cosseno 1
-A = 2  # amplitude do potencial 2
+q = 1  # frequência do cosseno (gama = 10)
+A = 2  # amplitude do potencial 2 ou 5
 
 # Potencial periódico V(x) = A cos(2π q x)
 def V_cos(x):
-    #return A * np.cos(2 * np.pi * q * x)
-    return - A * np.exp(- (x-0.5)**2 / 2*q**2)
+    return A * np.cos(2 * np.pi * q * x)
+    #return - A * np.exp(- (x-0.5)**2 / 2*q**2)
 
 # Matriz de potencial Vmn via transformada de Fourier discreta
 def compute_Vmn(V_func, G_vals):
@@ -51,13 +51,13 @@ bands_cos = compute_bands(k_vals, G_vals, Vmn_cos_real)
 x_plot = np.linspace(0, 1, 500)
 plt.figure(figsize=(10, 6))
 plt.plot(x_plot, V_cos(x_plot))
-#plt.title(f'Potencial V(x) = A cos(2πqx), A={A}')
-plt.title(r'Potencial $V(x) = -A e^{-x^2 / 2\gamma^2}$')
+plt.title(f'Potencial V(x) = A cos(2πqx), A={A}')
+#plt.title(r'Potencial $V(x) = -A e^{-x^2 / 2\gamma^2}$, A=2')
 plt.xlabel('x')
 plt.ylabel('V(x)')
 plt.grid(True)
 plt.tight_layout()
-#plt.savefig('exercicio2-cos2.png')
+#plt.savefig('exercicio2-exp.png')
 plt.show()
 
 # Plotar o gráfico das bandas
@@ -65,9 +65,10 @@ plt.figure(figsize=(10, 6))
 for i in range(len(G_vals)):
     plt.plot(k_vals, bands_cos[:, i], label=f'Banda {i+1}')
 plt.title(f'Bandas de energia com V(x) = A cos(2πqx), A={A}')
+#plt.title(r'Bandas de energia com $V(x) = -A e^{-x^2 / 2\gamma^2}$, A=2')
 plt.xlabel('k')
 plt.ylabel('Energia')
 plt.grid(True)
 plt.tight_layout()
-#plt.savefig('exercicio2-bandas2.png')
+#plt.savefig('exercicio2-bandas3.png')
 plt.show()
