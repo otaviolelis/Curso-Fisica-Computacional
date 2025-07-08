@@ -104,7 +104,7 @@ Se trocarmos a função $V(x)$ para $$V(x) = -A\exp[-x^2 / 2\gamma^2]$$:
 
 <img src="exercicio2-exp.png" width="600"/>
 
-o resultado também é diferente. Para a mesma amplitude A=2, observamos gaps na primeira e na segunda banda
+o resultado também é diferente. Para a mesma amplitude A=2, observamos gaps na primeira e na segunda banda:
 
 <img src="exercicio2-bandas3.png" width="600"/>
 
