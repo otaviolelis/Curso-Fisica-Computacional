@@ -80,13 +80,13 @@ Fizemos, então, um código que diagonalize este Hamiltoniano para k no interval
 
 <img src="exercicio1-1.png" width="600"/>
 
-
+O código desenvolvido para esse exercício está em: [Exercício 1](exercicio1.py)
 
 ## Exercício 2 - Caso 1D com V(x)
 
 Escolhemos uma função para $V(x)$ que respeite $V(x) = V(x+R)$ com $R=1$: $V(x) = A \cos(2\pi q x)$
 
-<img src="exercicio2-1.png" width="600"/>
+<img src="exercicio2-cos1.png" width="600"/>
 
 Depois, construimos os termos do potencial na equação central via:
 
@@ -94,4 +94,18 @@ $$V_{m,n} = \int_0^1 V(x)e^{-i G_{m,n}x}dx = \int_0^1 V(x)e^{-i 2\pi(m-n)x}dx$$
 
 E calculamos as bandas para esta nova matriz $V_{m,n}$. O resultado foi o seguinte:
 
-<img src="exercicio2-2.png" width="600"/>
+<img src="exercicio2-bandas1.png" width="600"/>
+
+Observamos que, como o A é pequeno (nesse caso A=2), há um gap apenas na primeira banda. Se aumentarmos o A para A=5, a segunda banda também se desloca, como podemos ver na imagem abaixo:
+
+<img src="exercicio2-bandas2.png" width="600"/>
+
+Se trocarmos a função $V(x)$ para $$V(x) = -A\exp[-x^2 / 2\gamma^2]$$:
+
+<img src="exercicio2-exp.png" width="600"/>
+
+o resultado também é diferente. Para a mesma amplitude A=2, observamos gaps na primeira e na segunda banda
+
+<img src="exercicio2-bandas3.png" width="600"/>
+
+O código desenvolvido para esse exercício está em: [Exercício 2](exercicio2.py)
